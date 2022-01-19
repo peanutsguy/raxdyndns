@@ -29,3 +29,5 @@ The following example will update the subdomain dev.braintrust.com.mx with the c
 ```csv
 braintrust.com.mx,dev.braintrust.com.mx,A
 ```
+
+[GitHub repository](https://github.com/peanutsguy/raxdyndns)
