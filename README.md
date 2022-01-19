@@ -1,13 +1,13 @@
 # Rackspace Cloud DNS as a Dynamic DNS
 ![build status](https://github.com/peanutsguy/raxdyndns/actions/workflows/docker-image.yml/badge.svg)
 
-This container image can be used to update Rackspace Cloud DNS with the current public IP from where the contianer is running.
+This container image can be used to update Rackspace Cloud DNS with the current public IP from where the container is running.
 
 Rackspace API limits must be considered, in order to avoid getting rejected requests.
 
 ## Usage
 ```docker
-docker run -d -e RAX_ACCOUNT={rax_account_number} -e RAX_USER={rax_user} -e RAX_KEY={rax_api_key} -v {domains_file_folder}:/dyndns/data/domains.csv --name testdyndns  peanutsguy/raxdyndns
+docker run -d -e RAX_ACCOUNT={rax_account_number} -e RAX_USER={rax_user} -e RAX_KEY={rax_api_key} -v {domains_file_folder}:/dyndns/data/domains.csv --name raxdyndns  ghcr.io/peanutsguy/raxdyndns
 ```
 
 | Parameter | Description |
@@ -18,7 +18,7 @@ docker run -d -e RAX_ACCOUNT={rax_account_number} -e RAX_USER={rax_user} -e RAX_
 | -v {domains.csv_file_location}:/dyndns/data/domains.csv | File containing the records that have to be updated |
 
 ### domains.csv
-This CSV must follow the format desribed below.
+This CSV must follow the format described below.
 
 **IMPORTANT! - Only type A records have been tested**
 ```csv
