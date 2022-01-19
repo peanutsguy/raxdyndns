@@ -1,4 +1,5 @@
 # Rackspace Cloud DNS as a Dynamic DNS
+![build status](https://github.com/peanutsguy/raxdyndns/actions/workflows/docker-image.yml/badge.svg)
 
 This container image can be used to update Rackspace Cloud DNS with the current public IP from where the contianer is running.
 
