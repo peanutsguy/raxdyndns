@@ -44,10 +44,9 @@ def update_record(domain_name,record,ip_address):
     return updated
 
 username = os.getenv("RAX_USER")
-apiKey = os.getenv("RAX_APIKEY")
+apiKey = os.getenv("RAX_KEY")
 
 ip_address = get_ip()
-# ip_address = "201.103.212.14"
 
 csv_file_path = "data/"+os.getenv("RAX_CSV")
 data_by_domain = load_csv(csv_file_path)

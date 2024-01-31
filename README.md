@@ -2,6 +2,7 @@
 ![build status](https://github.com/peanutsguy/raxdyndns/actions/workflows/docker-image.yml/badge.svg)
 
 **IMPORTANT! It has been rewritten from PHP to Python 3.9 (last version working with pyrax)**
+**Also armv7 support has been dropped**
 
 This container image can be used to update Rackspace Cloud DNS with the current public IP from where the container is running.
 
@@ -15,8 +16,8 @@ docker run -d -e RAX_USER={rax_user} -e RAX_APIKEY={rax_api_key} -v {domains_fil
 | Parameter | Description |
 | - | - |
 | -e RAX_USER={rax_user} | Rackspace username |
-| -e RAX_APIKEY={rax_api_key} | Rackspace API key |
-| -v {domains.csv_file_location}:/app/data/domains.csv | File containing the records that have to be updated |
+| -e RAX_KEY={rax_api_key} | Rackspace API key |
+| -v {domains.csv_file_location}:/dyndns/data/domains.csv | File containing the records that have to be updated |
 
 ### domains.csv
 This CSV must follow the format described below.
